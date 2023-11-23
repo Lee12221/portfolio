@@ -13,7 +13,6 @@ div{transition: .6s;}
 section{height: 100vh;
     position: relative;
 }
-section:nth-child(even){background: #eee;}
 /* 메뉴 투명도*/
 /* section:nth-child(1){background:rgb(255, 255, 255);} */
     /* 디스플레이 고정 */
@@ -47,8 +46,12 @@ section:nth-child(2){background: url("../img/Frame\ 1.png") center center / cove
     opacity: 1;
 }
 .gnb a:hover{background:none;
-color:rgb(255, 197, 61);
-transition: 1.5s; 
+color:rgb(240, 151, 34);
+transition: .1s; 
+font-weight: bold;
+}
+.gnb.on.first a:hover{
+    color: #fff;
 }
 
 
@@ -59,9 +62,13 @@ transition: 1.5s;
     z-index: 9999;           
 }
 .burger li{
-    height: 8px; background: #ffffff;
+    height: 8px; background:rgb(255, 197, 61);
     position: relative;
     transition: .6s;
+    border-radius: 20px;
+}
+.burger.first li{
+    background: #fff;
 }
 .burger li:nth-child(even){top:8px;}
 .burger.on li:nth-child(1),
@@ -96,7 +103,10 @@ transition: 1.5s;
 }
 .dotmenu a.on{
     width: 15px; height: 15px;
-    background: rgb(255, 255, 255);
+    background: rgb(240, 151, 34);
+}
+.dotmenu a.on.first{
+    background:#fff;
 }
 .dotmenu{
     display: flex;

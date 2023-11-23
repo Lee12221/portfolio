@@ -36,6 +36,15 @@ let offset;
             offset = innerHeight * sectionCounter;
             $("html, body").stop().animate({scrollTop:offset},600,"easeInOutExpo");
 
+            if(sectionCounter == 0){
+                $(".gnb").addClass("first");
+                $(".burger").addClass("first");
+                $(".dotmenu a").addClass("first");
+            }else{
+                $(".gnb").removeClass("first");
+                $(".dotmenu a").removeClass("first");
+                $(".burger").removeClass("first");
+            }
             godotmenu();
             sectionOn();
         }
@@ -43,11 +52,29 @@ let offset;
         function godotmenu(){
             $(".dotmenu a").removeClass("on");
             $(".dotmenu li").eq(sectionCounter).children("a").addClass("on");
+            if(sectionCounter == 0){
+                $(".gnb").addClass("first");
+                $(".burger").addClass("first");
+                $(".dotmenu a").addClass("first");
+            }else{
+                $(".gnb").removeClass("first");
+                $(".dotmenu a").removeClass("first");
+                $(".burger").removeClass("first");
+            }
             
         }
         function sectionOn(){
             $("section").removeClass("on");
             $("section").eq(sectionCounter).addClass("on");
+            if(sectionCounter == 0){
+                $(".gnb").addClass("first");
+                $(".burger").addClass("first");
+                $(".dotmenu a").addClass("first");
+            }else{
+                $(".gnb").removeClass("first");
+                $(".dotmenu a").removeClass("first");
+                $(".burger").removeClass("first");
+            }
         }
 
 
